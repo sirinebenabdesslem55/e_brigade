@@ -52,9 +52,6 @@ object(stdClass)[6]
   <div class="row">
     <h3>
       
-      
-      'select P_DATE_ENGAGEMENT, P_SECTION, P_ID, P_PRENOM, P_NOM,P_EMAIL,P_PHONE,GP_ID
-      from pompier';
       <?php if (isset($e->P_ID)) echo '('.$e->P_ID.') '; ?>
       <?php if (isset($e->CTitle)) echo $e->CTitle.' '; ?>
       <?php if (isset($e->P_PRENOM)) echo $e->P_PRENOM.' '; ?>
