@@ -1,3 +1,5 @@
+<!--ldflobrflzbrflrbflrbflqsbfklqesdbjflsdbfvolqersbdfrvlesrfvnlernglerhnjgvlezrngfvlarnfngfplnaq gr-->
+
 <?php
 class EmployeeModel
 {
@@ -6,7 +8,7 @@ class EmployeeModel
   }
   public function listAll()
   {
-    $sql = 'select P_DATE_ENGAGEMENT, P_SECTION, P_ID, P_PRENOM, P_NOM,P_EMAIL,P_PHONE,GP_ID
+    $sql = 'select P_DATE_ENGAGEMENT, P_SECTION, P_ID, P_PRENOM, P_PRENOM2,P_NOM_NAISSANCE, P_SEXE, P_CIVILITE, P_GRADE, P_PROFESSION, P_STATUT, P_SECTION, P_FIN, C_ID, GP_ID2, P_NOM,P_EMAIL,P_PHONE,GP_ID, P_BIRTHDATE, P_BIRTHPLACE, P_BIRTH_DEP, P_PHONE, P_PHONE2, P_ABBREGE, P_ADDRESS, P_ZIP_CODE, P_CITY
       from pompier';
     try {
       $dbh = new PDO('mysql:host=localhost;dbname=ebrigade;charset=utf8', 'root', 'sirine');
@@ -57,7 +59,7 @@ class EmployeeModel
   }
   public function listOne($id)
   {
-    $sql = 'select P_DATE_ENGAGEMENT, P_SECTION, P_ID, P_PRENOM, P_NOM,P_EMAIL,P_PHONE,GP_ID
+    $sql = 'select P_DATE_ENGAGEMENT, P_SECTION, P_ID, P_PRENOM, P_PRENOM2,P_NOM_NAISSANCE, P_SEXE, P_CIVILITE, P_GRADE, P_PROFESSION, P_STATUT, P_SECTION, P_FIN, C_ID, GP_ID2, P_NOM,P_EMAIL,P_PHONE,GP_ID, P_BIRTHDATE, P_BIRTHPLACE, P_BIRTH_DEP, P_PHONE, P_PHONE2, P_ABBREGE, P_ADDRESS, P_ZIP_CODE, P_CITY
       from pompier';
     try {
       $dbh = new PDO('mysql:host=localhost;dbname=ebrigade;charset=utf8', 'root', 'sirine');
@@ -72,20 +74,23 @@ class EmployeeModel
     }
   }
 
-  public function updateOne($name, $last, $contactID)
+  public function updateOne($nom,$nom2,$prenom,$prenom2,$datenaissance,$lieunaissance,$depnaissance,$sexe,$phone,$phone2,$mail,$address,$ville,$zipcode,$groupeID, $profession,$grade,$statut,$dateengagement,$P_ID)
   {
 
-    $sql = "UPDATE pompier SET P_PRENOM=?, P_PHONE=? WHERE P_ID=?";
+    $sql = "UPDATE pompier SET P_PRENOM=?,P_PRENOM2=? ,P_NOM=?, P_NOM_NAISSANCE=?,P_BIRTHPLACE=?, P_BIRTHDATE=?, P_BIRTH_DEP=?, P_SEXE=?, P_PHONE=?, P_PHONE2=?,P_EMAIL=?, P_ADDRESS=?,P_CITY=?, P_ZIP_CODE=?, GP_ID=?, P_PROFESSION=?,P_GRADE=?,P_STATUT=?, P_DATE_ENGAGEMENT=? WHERE P_ID=?";
     try {
       $dbh = new PDO('mysql:host=localhost;dbname=ebrigade;charset=utf8', 'root', 'sirine');
-      $dbh->prepare($sql)->execute([$name, $last, $contactID]);
+      $dbh->prepare($sql)->execute([$nom,$nom2,$prenom,$prenom2,$datenaissance,$lieunaissance,$depnaissance,$sexe,$phone,$phone2,$mail,$address,$ville,$zipcode,$groupeID, $profession,$grade,$statut,$dateengagement,$P_ID]);
       $dbh = null;
       return 'ok';
     } catch (PDOException $e) {
       print "Erreur !: " . $e->getMessage() . "<br/>";
       die();
+
     }
   }
+
+
 
   public function delete($id)
   {
