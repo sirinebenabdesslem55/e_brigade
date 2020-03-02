@@ -1,3 +1,5 @@
+<!--kjbrfoazgebfolazheflearhflzernhflerhflernflegnlednfgpzerjnfgmlzernpgfzergfpneprgfne-->
+
 <?php
 class EmployeeController
 {
@@ -56,13 +58,34 @@ class EmployeeController
   {
     //variable de la view
     if (isset($_POST['id'])) {
-      $contactID = strtolower(trim($_POST['id']));
-      $Firstname = strtolower(trim($_POST['prenom']));
-      $Lastname = strtolower(trim($_POST['nom']));
+      
+      $P_ID = strtolower(trim($_POST['id']));
+      $P_NOM = strtolower(trim($_POST['nom']));
+      $P_NOM_NAISSANCE = strtolower(trim($_POST['nomnaissance']));
+      $P_PRENOM = strtolower(trim($_POST['prenom']));
+      $P_PRENOM2 = strtolower(trim($_POST['prenom2']));
+      $P_BIRTHDATE = strtolower(trim($_POST['datenaissance']));
+      $P_BIRTHPLACE = strtolower(trim($_POST['lieunaissance']));
+      $P_BIRTH_DEP = strtolower(trim($_POST['depnaissance']));
+      $P_SEXE = strtolower(trim($_POST['sexe']));
+      $P_PHONE = strtolower(trim($_POST['portable']));
+      $P_PHONE2 = strtolower(trim($_POST['portable2']));
+      $P_EMAIL = strtolower(trim($_POST['email']));
+      $P_ADDRESS = strtolower(trim($_POST['adresse']));
+      $P_CITY = strtolower(trim($_POST['ville']));
+      $P_ZIP_CODE = strtolower(trim($_POST['codepostal']));
+      $GP_ID = strtolower(trim($_POST['groupeID']));
+      $P_PROFESSION = strtolower(trim($_POST['profession']));
+      $P_STATUT = strtolower(trim($_POST['statut']));
+      $P_DATE_ENGAGEMENT = strtolower(trim($_POST['dateEng']));
+      $P_PHONE = strtolower(trim($_POST['portable']));
+      $P_GRADE = strtolower(trim($_POST['grade']));
+
+
       //model lien entre controller et la base
       require_once MODELS . DS . 'employeeM.php';
       $m = new EmployeeModel();
-      $result = $m->updateOne($Firstname, $Lastname, $contactID);
+      $result = $m->updateOne($P_NOM,$P_NOM_NAISSANCE,$P_PRENOM,$P_PRENOM2,$P_BIRTHDATE,$P_BIRTHPLACE,$P_BIRTH_DEP,$P_SEXE,$P_PHONE,$P_PHONE2,$P_EMAIL,$P_ADDRESS,$P_CITY,$P_ZIP_CODE,$GP_ID, $P_PROFESSION,$P_GRADE ,$P_STATUT,$P_DATE_ENGAGEMENT,$P_ID);
 
       $this->liste();
     }else{
