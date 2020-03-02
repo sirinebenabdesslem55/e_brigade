@@ -99,6 +99,17 @@
                 <li><a href="index.php?c=employee&m=listeMateriel">Materiel</a></li> 
               </ul>
           </li>
+          <li class="sub-menu">
+            <a href="javascript:;">
+              <i class="fa fa-th"></i>
+              <span>Interventions</span>
+            </a>
+              <ul class="sub">
+                <li><a href="index.php?c=employee&m=liste">Liste des Interventions</a></li>
+                <li><a href="index.php?c=employee&m=liste">Ajouter une Intervention</a></li>
+                <li><a href="index.php?c=employee&m=liste">Ajouter un rapport</a></li>
+              </ul>
+          </li>
           
 
 
