@@ -36,7 +36,7 @@ else{
 
 
 $home = new HomeController();
-$pages = ['interventionAdd','add','home','update','delete','liste'];
+$pages = ['interventionAdd','add','home','update','delete','liste','monProfil','affiche','login'];
 
 if (true)
  {

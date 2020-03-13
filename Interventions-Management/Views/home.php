@@ -49,7 +49,8 @@ $users= UsersController::getAllUsers();
                   
                   <footer>
                     <div class="centered">
-                      <button type="button" class="btn btn-success"><i class="fa fa-eye"></i>Afficher</button>
+                      <a href="http://localhost/Interventions-Management/monProfil">
+                      <button type="button" class="btn btn-success"><i class="fa fa-eye"></i>Afficher</button></a>
 		              <button type="button" class="btn btn-theme02"><i class="fa fa-pencil"></i>Modifier</button>
 		              
                     </div>

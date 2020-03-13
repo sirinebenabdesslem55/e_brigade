@@ -1,7 +1,7 @@
 
 
 <?php
-require_once './Models/User.php ';
+//require_once './Models/User.php ';
 
 class UsersController{
 
@@ -23,14 +23,21 @@ public static function getOneUser($id){
      return json_decode($users,true);
 }
 
-/*public function getOnUser(){
-    if(isset($_POST['P_ID'])){
-    $data =array(
-        'P_ID'=> $_POST['P_ID']);
-    $user= User::getUser($data);
-    return $user;
-    }
-}*/
+public static function getOneUserByCode($code){ 
+        //$code=$_POST['P_CODE'];
+        var_dump($code);
+        $users = file_get_contents("http://localhost/api/utilisateurs.php?c=utilisateurs&m=getOneUserByCode&P_CODE=".$code);
+        var_dump($users);
+     return json_decode($users,true);
+}
+
+public static function getOneUserByLogin($code, $mdp){
+    $users = file_get_contents("http://localhost/api/utilisateurs.php?c=utilisateurs&m=getOneUserByLogin&P_CODE=".$code."&P_MDP=".$mdp);
+    var_dump($users);
+    return json_decode($users,true);
+
+
+}
 
 public static function update(){
     $m=new User();
@@ -38,6 +45,7 @@ public static function update(){
             
 
             $array = array(
+                        $_POST['P_ID'],
                         $_POST['P_NOM'],
                         $_POST['P_NOM_NAISSANCE'],
                         $_POST['P_PRENOM'],
@@ -57,8 +65,10 @@ public static function update(){
                         $_POST['P_STATUT'],
                         $_POST['P_DATE_ENGAGEMENT']
         );
-
+        //$t=json_encode($array);
         die(print_r($array));
+        $users = file_get_contents("http://localhost/api/utilisateurs.php?c=utilisateurs&m=update&P_ID=".$t);
+        //die(print_r($array));
         //if($m->updateUser($_POST['P_NOM'],$_POST['P_NOM_NAISSANCE'],$_POST['P_PRENOM'],
         //$_POST['P_PRENOM2'],$_POST['P_BIRTHDATE'],$_POST['P_BIRTHPLACE'], $_POST['P_BIRTH_DEP'],$_POST['P_SEXE'],$_POST['P_EMAIL'],$_POST['P_PHONE'],$_POST['P_PHONE2'],$_POST['P_ADDRESS'],$_POST['P_CITY'],$_POST['P_ZIP_CODE'],$_POST['P_PROFESSION'],$_POST['P_GRADE'],$_POST['P_STATUT'],$_POST['P_DATE_ENGAGEMENT']))
         //{
@@ -85,7 +95,7 @@ public static function right(){
 
 
 
-public function auth(){
+/*public function auth(){
 
 if(isset($_POST['submit']))
 {
@@ -106,11 +116,9 @@ header('Location: https://localhost/Interventions-Management/liste');
 
 }
 
-}
+}*/
 
 }
-//$test= UsersController::getOneUser(1);
-//var_dump($test);
 
 ?>
 

@@ -47,6 +47,17 @@ $dd=$data->getOnUser();
               </ul>
           </li>
 
+          <li class="sub-menu">
+            <a href="http://localhost/Interventions-Management/login">
+              <i class="fa fa-th"></i>
+              <span>Se connecter</span>
+            </a>
+              <ul class="sub">
+                <li><a>Liste Personnel</a></li>
+                <li><a href="index.php?c=employee&m=add">Ajout Personnel</a></li>
+              </ul>
+          </li>
+
 
           <li class="sub-menu">
             <a href="javascript:;">

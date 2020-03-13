@@ -49,11 +49,10 @@ $users= UsersController::getAllUsers();
 
                             
                             <td>
-                              <form  class="mr-1" method="post" action="details">
-                                <button class="btn btn-sm btn-info "><i class="fa fa-eye" ></i></button>
+                              <form  class="mr-1" method="post" action="affiche">
                                 <input type="hidden" name="P_ID" value="<?php
-                              echo $user['P_ID'];?>
-                              ">
+                              echo $user['P_ID'];?>">
+                                <button class="btn btn-sm btn-info "><i class="fa fa-eye" ></i></button></a>
                               </form>
                             </td>
                             <td>
