@@ -32,11 +32,26 @@ public static function getOneUserByCode($code){
 }
 
 public static function getOneUserByLogin($code, $mdp){
+    var_dump($code);
     $users = file_get_contents("http://localhost/api/utilisateurs.php?c=utilisateurs&m=getOneUserByLogin&P_CODE=".$code."&P_MDP=".$mdp);
-    var_dump($users);
-    return json_decode($users,true);
-
-
+    //var_dump($users);
+    if ($users == 1){
+        $a = "Mot de passe ou nom utilisateur incorrect";
+        //var_dump($a);
+        return $a;
+    }
+    elseif ($users == 2){
+        $b = "Formulaire mal remplit";
+        //var_dump($b);
+        return $b;
+    }
+    else{
+        $user = json_decode($users,true);
+        //var_dump($user);
+        return $user;
+       
+    }
+   
 }
 
 public static function update(){

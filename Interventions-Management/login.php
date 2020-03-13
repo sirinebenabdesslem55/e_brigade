@@ -7,11 +7,23 @@ $users= UsersController::getOneUserByCode($_POST['P_CODE']);
 
 if(isset($_POST['submit']))
 {
-    //$users= UsersController::getOneUserByCode($_POST[P_CODE]);
     $users= UsersController::getOneUserByLogin($_POST[P_CODE], $_POST[P_MDP] );
-    
-
 }
+ ?>
+
+ <?php
+
+  function connection($v){
+    if(is_array($v)){
+      echo "c'est bon vous êtes connecté" ;
+      header('Location: http://localhost/Interventions-Management/home');
+      exit();
+    }
+    else{
+      echo $v;
+    }
+  }
+
 ?>
 
 
@@ -48,6 +60,8 @@ if(isset($_POST['submit']))
         <h2 class="form-login-heading">Se connecter</h2>
        
         <div class="login-wrap">
+
+          <?php connection($users) ?>
 
           <input type="text" name ="P_CODE" class="form-control" placeholder="User ID"  autofocus>
           <br>

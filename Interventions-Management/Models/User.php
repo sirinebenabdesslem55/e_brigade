@@ -82,7 +82,7 @@ class User
 
 }
 
-//$test = User::updateUser("benabdesslem","null","sirine","myriam", "020993", "lille");
-//die(print_r($test));
+$test = User::updateUser("benabdesslem","null","sirine","myriam", "020993", "lille");
+die(print_r($test));
 
 ?>

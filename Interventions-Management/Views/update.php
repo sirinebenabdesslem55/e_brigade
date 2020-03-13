@@ -1,6 +1,9 @@
 <?php
 require_once './Controllers/HomeController.php ';
 require_once './Controllers/UsersController.php ';
+
+
+
 if(isset($_POST['P_ID'])){
 $users= UsersController::getOneUser($_POST['P_ID']);
 }
