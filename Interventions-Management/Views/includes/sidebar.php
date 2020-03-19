@@ -18,6 +18,18 @@ $dd=$data->getOnUser();
         <ul class="nav pull-right top-menu">
           <li><a class="logout" href="login.html">Logout</a></li>
         </ul>
+
+        <script type="text/javascript">
+
+function googleTranslateElementInit() 
+{
+  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+</script>
+<a class="  black-bg form-control form-control-navbar text-muted " href=""><div   id="google_translate_element"></div>
+ </a>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
       </div>
     </header>
 
@@ -50,7 +62,7 @@ $dd=$data->getOnUser();
           <li class="sub-menu">
             <a href="http://localhost/Interventions-Management/login">
               <i class="fa fa-th"></i>
-              <span>Se connecter</span>
+              <span>Traduction</span>
             </a>
               <ul class="sub">
                 <li><a>Liste Personnel</a></li>

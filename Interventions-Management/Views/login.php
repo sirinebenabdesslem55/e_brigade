@@ -5,64 +5,21 @@ require_once './Controllers/HomeController.php '
 
 
 <body>
-  
-  <div id="login-page">
-    <div class="container">
-      <form class="form-login" action="index.html">
-        <h2 class="form-login-heading">sign in now</h2>
-        <div class="login-wrap">
-          <input type="text" class="form-control" placeholder="User ID" autofocus>
-          <br>
-          <input type="password" class="form-control" placeholder="Password">
-          <label class="checkbox">
-            <input type="checkbox" value="remember-me"> Remember me
-            <span class="pull-right">
-            <a data-toggle="modal" href="login.html#myModal"> Forgot Password?</a>
-            </span>
-            </label>
-          <button class="btn btn-theme btn-block" href="index.html" type="submit"><i class="fa fa-lock"></i> SIGN IN</button>
-          <hr>
-          <div class="login-social-link centered">
-            <p>or you can sign in via your social network</p>
-            <button class="btn btn-facebook" type="submit"><i class="fa fa-facebook"></i> Facebook</button>
-            <button class="btn btn-twitter" type="submit"><i class="fa fa-twitter"></i> Twitter</button>
-          </div>
-          <div class="registration">
-            Don't have an account yet?<br/>
-            <a class="" href="#">
-              Create an account
-              </a>
-          </div>
-        </div>
-        <!-- Modal -->
-        <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title">Forgot Password ?</h4>
-              </div>
-              <div class="modal-body">
-                <p>Enter your e-mail address below to reset your password.</p>
-                <input type="text" name="email" placeholder="Email" autocomplete="off" class="form-control placeholder-no-fix">
-              </div>
-              <div class="modal-footer">
-                <button data-dismiss="modal" class="btn btn-default" type="button">Cancel</button>
-                <button class="btn btn-theme" type="button">Submit</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- modal -->
-      </form>
-    </div>
-  </div>
-  
-  <script>
-    $.backstretch("img/login-bg.jpg", {
-      speed: 500
-    });
-  </script>
-</body>
+  <p>
+    Au théâtre, Victor Hugo se manifeste comme un des chefs de file du romantisme français lorsqu'il expose sa théorie du drame romantique dans les préfaces qui introduisent Cromwell en 18276, puis Hernani en 1830 qui sont de véritables manifestes, puis par ses autres œuvres dramatiques : Ruy Blas en 1838, mais aussi Lucrèce Borgia et Le Roi s'amuse. 
+Victor Hugo est aussi un poète lyrique avec des recueils comme Odes et Ballades (1826), Les Feuilles d'automne (1831) ou Les Contemplations (1856), mais il est aussi poète engagé contre Napoléon III dans Les Châtiments (1853) ou encore poète épique avec La Légende des siècles (1859 et 1877). 
+Ses romans rencontrent également un grand succès populaire, avec notamment Notre-Dame de Paris (1831), et plus encore avec Les Misérables (1862). 
+Son œuvre multiple comprend aussi des discours politiques à la Chambre des pairs, à l'Assemblée constituante et à l'Assemblée législative, notamment sur la peine de mort, l’école ou l’Europe, des récits de voyages (Le Rhin, 1842, ou Choses vues, posthumes, 1887 et 1890), une correspondance abondante, ainsi que de nombreux croquis et dessins à la plume et au lavis. 
+Victor Hugo a fortement contribué au renouvellement de la poésie et du théâtre. Il a été admiré par ses contemporains et l’est encore, mais il a aussi été contesté par certains auteurs modernes7. Il a permis à de nombreuses générations de développer une réflexion sur l’engagement de l’écrivain dans la vie politique et sociale grâce à ses multiples prises de position, choisissant de s'exiler pour vivre à Guernesey pendant les vingt ans du Second Empire. 
+Ses choix, à la fois moraux et politiques8, durant la deuxième partie de sa vie, et son œuvre hors du commun ont fait de lui un personnage emblématique, que la Troisième République a honoré par des funérailles nationales, qui ont accompagné le transfert de sa dépouille au Panthéon de Paris le 1er juin 1885, dix jours après sa mort. Hugo commence la rédaction la même année de Han d'Islande (publié en 1823), qui reçoit un accueil mitigé, mais vaut à son auteur une nouvelle pension de deux mille francs. Une critique de Charles Nodier, bien argumentée, est l’occasion d’une rencontre entre les deux hommes et de la naissance d’une amitié29. À la bibliothèque de l'Arsenal, berceau du romantisme, il participe aux réunions du Cénacle30, qui auront une grande influence sur son développement31. Son amitié avec Nodier dure jusqu’à 1827-1830, époque où celui-ci commence à être très critique envers les œuvres de Victor Hugo32. Durant cette période, Victor Hugo renoue avec son père33, qui lui inspirera les poèmes Odes à mon pèreb et Après la bataille34. Celui-ci meurt en 1828. 
+Jusqu'en mars 1824, le couple habite chez les parents d'Adèle ; ils déménagent pour le 90, rue de Vaugirardc, appartement où leur fille Léopoldine naît35, en août 1824. 
+Sa pièce Cromwell, publiée en 1827, fait éclat. Dans la préface de ce drame, Victor Hugo s’oppose aux conventions classiques, en particulier à l'unité de temps et à l'unité de lieu, et jette les premières bases de son drame romantique. 
+L'arrivée de leur fils Charles en novembre 1826 fait déménager la famille l'année suivante dans une maison au 11, rue Notre-Dame-des-Champsd,35. 
+Le couple reçoit beaucoup et se lie avec Sainte-Beuve, Lamartine, Mérimée, Musset, Delacroix36. 
+François–Victor naît en octobre 1828. En mai 1830, la famille déménage pour la Rue Jean-Goujon37. Adèle, leur dernier enfant, naît en juillet. Ils habiteront rue Jean-Goujon jusqu'en octobre 1832. 
+Adèle, la mère, délaissée dans le tourbillon qui a entouré la rédaction, les répétitions, les représentations et le triomphe d’Hernani, se rapproche du meilleur ami et confident du couple, Sainte-Beuve, puis entretient une relation amoureuse avec lui, qui se développe durant l’année 183138. Entre les deux hommes, les relations courtoises se maintiennent pourtant avant que leur amitié ne se transforme en haine (Hugo songe même à le provoquer en duel) lorsqu'Adèle avoue son infidélité à son mari. Leur liaison dure jusqu'en 1837, date à laquelle Sainte-Beuve quitte Paris pour Lausanne39. 
+De 1826 à 1837, la famille séjourne fréquemment au Château des Roches à Bièvres, propriété de Bertin l’Aîné, directeur du Journal des débats. Au cours de ces séjours, Hugo rencontre Berlioz, Chateaubriand, Liszt, Giacomo Meyerbeer, et rédige des recueils de poésie, dont les Feuilles d'automne. Il publie en 1829, le recueil de poèmes les Orientales. La même année, paraît Le Dernier Jour d'un condamné, court roman dans lequel Victor Hugo présente son dégoût de la peine de mort, sujet qu'il abordera à nouveau dans Claude Gueux en 1834. Le roman Notre Dame de Paris paraît en 1831. 
+  </p>
 
 
+ </body>

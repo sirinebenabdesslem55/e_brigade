@@ -13,26 +13,16 @@ class ArchiveController
 
         $v=new View();
         $v->setVar('interventions',$listeIntervention);
-        $v->render('archiveintervention');
+        $v->render('intervention');
     }
     public static function detailintervention($id)
     {
         $interventionM = new interventionsModel();
         $Intervention =  $interventionM->getbyinterventionid($id);
         //var_dump($listeIntervention);
-     //   $listeengin =  $interventionM->getenginbyinterventionID($id);
-        //var_dump($listeengin);
-      //  $listepersonnel =  $interventionM->getpersonnelbyenginID(1,$id);
-        //var_dump($listepersonnel);
-        //$responsable = $interventionM->getResponsablePersonnelID(4);
-       // var_dump($responsable);
         $v=new View();
-        //$v->setVar('intervention',$Intervention[0]);
-       // $v->setVar('engins',$listeengin);
-       // $v->setVar('idinterventions',$id);
         $v->setVar('intervention',$Intervention);
-        //$v->setVar('interventions',$listeIntervention);
-        $v->render('archivevueintervention');
+        $v->render('Vueintervention');
     }
 
 }
